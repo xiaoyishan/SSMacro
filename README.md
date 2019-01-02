@@ -1,0 +1,2 @@
+# SSMacro
+cocoa macro
