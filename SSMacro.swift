@@ -24,7 +24,7 @@ let kAppVersion : String = Bundle.main.infoDictionary!["CFBundleShortVersionStri
 let OSInfoFile : String   =    "/System/Library/CoreServices/SystemVersion.plist"
 let OSInfoFile_server:String = "/System/Library/CoreServices/ServerVersion.plist"
 
-let isOSServer = NSURL(fileURLWithPath: "/System/Library/CoreServices/SystemVersion.plist").checkResourceIsReachableAndReturnError(nil)
+let isOSServer = !NSURL(fileURLWithPath: OSInfoFile_server).checkResourceIsReachableAndReturnError(nil)
 
 // 颜色
 public func randColor() -> NSColor {
