@@ -45,11 +45,11 @@ func kNOTIFY_REMOVE(observer: Any, name: String) {
 }
 
 // 开发Log
-func DLog<T>(message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line) {
+func DLog<T>(msg: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line) {
     #if DEBUG
     let dformatter = DateFormatter()
     dformatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     let lastName = ((fileName as NSString).pathComponents.last!)
-    print("\n\(dformatter.string(from: Date())) [\(lastName)][第\(lineNumber)行] \n\t\t \(message)")
+    print("\n\(dformatter.string(from: Date())) [\(lastName)][第\(lineNumber)行] \n\t\t \(msg)")
     #endif
 }
